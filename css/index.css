@@ -1,0 +1,336 @@
+@font-face{
+	src:url(../fonts/SuisseWorks-Book.otf);
+	font-family: works;
+}
+
+@font-face{
+	src:url(../fonts/FGrotesk-Regular.otf);
+	font-family: f_grotesk;
+}
+
+@font-face{
+	src:url(../fonts/FGrotesk-Italic.otf);
+	font-family: f_grotesk_italic;
+}
+
+@font-face{
+	src:url(../fonts/FGroteskThin-Regular.otf);
+	font-family: f_grotesk_thin;
+}
+
+*
+{
+	transition: .2s;
+}
+
+body
+{
+	overflow-x: hidden;
+	background: black;
+	color:white;
+	padding: 30px;
+	padding-top: 0px;
+	margin: 0;
+	font-weight: normal;
+}
+
+a
+{
+	text-decoration: none;
+	color: white;
+}
+
+a:hover
+{
+	text-decoration: underline;
+}
+
+#active_nav
+{
+	text-decoration: underline;
+}
+
+#active_nav > a
+{
+	color:#CD00FF;
+}
+
+/*/////////////////////////////////
+nav & footer css for the index page
+/////////////////////////////////*/
+.index_landing_container
+{
+	position: absolute;
+	top:0px;
+	left: 30px;
+	width: calc(100% - 60px);
+}
+
+.index_landing
+{
+	height: 50vh;
+}
+
+.index_landing_img_hero
+{
+	position: relative;
+	padding-top:0;
+	height: calc(100vh - 90px);
+	background: #3A72F2;
+	border-radius: 350pt;
+}
+
+/*/////////////////////////////////
+nav & footer css for the about page
+/////////////////////////////////*/
+.about_body
+{
+
+	font-family: f_grotesk;
+	font-size: 11pt;
+	font-weight: lighter;
+	padding-right: 20pt;
+	line-height: 140%;
+	
+}
+
+.about_img_hero
+{
+	position: relative;
+	padding-top:0;
+	height: calc(100vh - 250px);
+	background: #3A72F2;
+}
+
+/*/////////////////////////////////////////
+nav & footer css for the project index page
+/////////////////////////////////////////*/
+.projects_row
+{
+	display: flex;
+	padding-bottom: 30px;
+	justify-content: space-between;
+}
+
+hr
+{
+	margin-top: 32pt;
+}
+
+#first_project_row
+{
+	margin-top: 30pt;
+}
+
+#last_project_row
+{
+	padding-bottom: 0;
+}
+
+.project
+{
+	/*flex: 1;*/
+	width: calc(((100vw - 60px)/3) - 20pt);
+	height: calc(((100vw - 60px)/3) - 20pt);
+	border-radius: 50%;
+	background: red;
+	transition: 0s;
+
+}
+
+
+/*///////////////////////////////////////////////////
+nav & footer css for the landing page of each project
+///////////////////////////////////////////////////*/
+.project_landing_container
+{
+	position: absolute;
+	top:0px;
+	left: 30px;
+	width: calc(100% - 60px);
+}
+
+.project_landing
+{
+	position: relative;
+	padding-top:0;
+	height: 100vh;
+}
+
+nav
+{
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav_header
+{
+	font-family: f_grotesk;
+	text-transform: uppercase;
+	font-size: 10pt;
+}
+
+.landing_img_hero
+{
+	width: 100%;
+	height: calc(100vh - 165px);
+	background: #3A72F2;
+}
+
+.footer_wrapper
+{
+	position: absolute;
+	bottom: 25px;
+	left: 0;
+	width: 100%;
+}
+
+.footer
+{
+	display: flex	
+}
+
+.col_footer
+{
+	flex: 1;
+}
+
+.col_footer_large
+{
+	flex: 2;
+}
+
+.footer_caption
+{
+	padding-top: 30px;
+	font-family: f_grotesk;
+	text-transform: uppercase;
+	font-size: 10pt;
+	font-weight: normal;
+}
+
+.footer_title
+{
+	font-family: works;
+	font-size: 23pt;
+	font-weight: normal;
+	line-height: 00%;
+	font-weight: normal;
+}
+
+/*/////////
+project css
+//////////*/
+
+.row
+{
+	display: flex;
+}
+
+.col_small
+{
+	flex: 1;
+}
+
+.col_medium
+{
+	flex: 3;
+}
+
+.col_large
+{
+	flex: 4;
+}
+
+.hero_text
+{
+	font-weight: normal;
+	font-family: f_grotesk_thin;
+	font-size: 36pt;
+	line-height: 130%;
+	hyphens: none;
+
+}
+
+.project_hero_img
+{
+	width: 100%;
+	height: auto;
+}
+
+.padding_for_project_section
+{
+	height: 100vh;
+}
+
+@media only screen and (max-width: 1600px) {
+	.footer_title
+	{	
+		font-size: 20pt;
+	}
+
+	.hero_text
+	{
+		font-size: 36pt;
+	}
+}
+
+
+@media only screen and (max-width: 1270px) {
+	.footer_title
+	{	
+		font-size: 16pt;
+	}
+
+	.hero_text
+	{
+		font-size: 24pt;
+	}
+
+	.landing_img_hero
+	{
+		height: calc(100vh - 150px);
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.footer
+	{	
+		display: block;
+		-webkit-filter: invert(100%); /* Safari 6.0 - 9.0 */
+		filter: invert(100%);
+	}
+
+	.col_footer
+	{
+		block:1;
+	}
+
+	.col_footer_large
+	{
+		flex: 2;
+	}
+
+	.col_small
+	{
+		display: none;
+	}
+
+	.landing_img_hero
+	{
+		height: calc(100vh - 330px);
+	}
+
+	.landing_img_hero
+	{
+		width: 200%;
+		margin-left: -30px;
+		height: calc(100vh - 44px);
+		background: #3A72F2;
+	}
+
+
+}
+
+
+
